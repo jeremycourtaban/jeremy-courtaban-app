@@ -1,5 +1,11 @@
 # React + TypeScript + Vite
 
+## Main info
+
+This application is a refactor of my personal Web site jeremycourtaban.com build in 2018 when I started to dev.
+
+## Template info
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
