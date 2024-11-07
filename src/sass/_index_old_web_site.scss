@@ -1,0 +1,326 @@
+/* 
+Codes couleurs héxadécimaux.
+Orange Ubuntu 100% : #E95420
+Orange Ubuntu 50% : #F4AA90
+Cool grey Ubuntu : #333333
+Noir : #000000
+Blanc : #FFFFFF
+*/
+
+/* Général. */
+body
+{
+	font-family: 'Ubuntu';
+}
+
+h1
+{
+	margin: 0;
+}
+
+h3
+{
+	font-size: 1em;
+	text-decoration: underline;
+}
+
+ul {
+	padding: 0;
+}
+
+a
+{
+	color: #E95420;
+}
+
+a:hover
+{
+	color: #F4AA90;
+	text-decoration: none;
+}
+
+#top
+{
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	bottom: 250px;
+	right: 0;
+	background-color: #E95420;
+	display: none;
+}
+
+#top:hover
+{
+	background-color: #333333;
+}
+
+/* Header - Footer. */
+header
+{
+	transition-duration: 1s;
+}
+
+header, footer
+{
+	height: 200px;
+	background-color: #E95420;
+	display: flex;
+	align-items: center;
+	color: white;
+}
+
+/* Header. */
+header div div
+{
+	align-items: center;
+}
+
+header ul li a 
+{
+	color: white;
+}
+
+header ul li a:hover
+{
+	color: white;
+	text-decoration: underline;
+}
+
+.headerScroll
+{
+	/* transition-duration: 1s; Fonctionne au scroll vers le bas mais pas au retour à l'initial car dans ce cas cette classe n'est plus appliquée sur le header et donc cette propriété disparait. */
+	/* transform: scaleY(1); Permet de contourner la valeur height:auto (ou initial) non prise en compte par les navigateurs dans la tansition mais n'a pas fonctionné, problème réglé avec height:100px ci-dessous. */
+	height: 100px;
+	/* height: auto; Ne fonctionne pas. */
+	/* height: initial; Comme pour auto, ne fontionne pas. */
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+}
+
+nav
+{
+	display: flex;
+	justify-content: flex-end;
+}
+
+nav ul
+{
+	display: flex;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li
+{
+	margin-left: 20px;
+}
+
+/* Footer. */
+footer
+{
+	text-align: center;
+}
+
+footer ul
+{
+	list-style-type: none;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+}
+
+footer ul li
+{
+	width: 80px;
+	height: 80px;
+	margin: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid white;
+	border-radius: 10%;
+}
+
+.footer_ul_li_js
+{
+	background-color: white;
+}
+
+svg
+{
+	width: 50px;
+	height: 50px;
+	fill: white;
+}
+
+.svg_js
+{
+	fill: #E95420;
+}
+
+/* Section. */
+section
+{
+	margin-top: 40px;
+}
+
+section ul li
+{
+	list-style-type: none;
+}
+
+#photo img
+{
+	width: 100%;
+}
+
+/*
+.website
+{
+	border: 2px solid white;
+}
+*/
+
+.website:hover
+{
+	background-color: #E95420;
+	color: white;
+}
+
+.website_actif
+{
+	background-color: #E95420;
+	color: white;
+}
+
+#websites_right
+{
+	background-color: #E95420;
+	color: white;
+	font-style: italic;
+	padding-top: 15px;
+}
+
+/*
+#websites_right:hover
+{
+	border: 2px solid #E95420;
+}
+*/
+
+#websites_img
+{
+	width: 100%;
+	opacity: 0.8;
+}
+
+#websites_img:hover
+{
+	opacity: 1;
+}
+
+#websites a
+{
+	color: inherit;
+}
+
+#skills ul
+{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#skills ul li
+{
+	padding: 10px;
+	border: 2px solid white;
+}
+
+#skills ul li:hover
+{
+	border: 2px solid #E95420;
+}
+
+.skills_js
+{
+	background-color: #E95420;
+	color: white;
+}
+
+.button
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 20px;
+	background-color: #E95420;
+	color: white;
+	border: 2px solid #E95420;
+}
+
+.button:hover
+{
+	background-color: white;
+	color: #E95420;	
+}
+
+/* Menu mobile. */
+#menu_mobile_bouton
+{
+	display: none;
+}
+
+.menu_mobile_ouvert
+{
+	display: flex !important;
+	flex-direction: column;
+	position: fixed;
+	top: 0;
+	left: 0;
+	/* width: 300px; */
+	height: 400px;
+	background-color: #333333;
+	z-index: 5;
+	font-size: 2em;
+}
+
+.menu_mobile_ouvert_ul
+{
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+	height: 100%;
+}
+
+.menu_mobile_ouvert_ul_li
+{
+	border-bottom: 2px solid #E95420;
+	width: 100%;
+	text-align: right;
+	padding-bottom: 20px;
+}
+
+/* Affichage mobile. */
+@media all and (max-width: 992px)
+{
+	#menu
+	{
+		display: none;
+	}
+
+	#menu_mobile_bouton
+	{
+		display: inherit;
+	}
+}
+
+@media all and (min-width: 768px)
+{
+	#websites_left
+	{
+		text-align: right;
+	}
+}
