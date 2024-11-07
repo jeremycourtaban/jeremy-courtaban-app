@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./index.css";
+import "./sass/index.scss";
+import "./App.css";
+import { About } from "./js/components/About";
+import { Footer } from "./js/components/Footer";
+import { Header } from "./js/components/Header";
+import { Procedures } from "./js/components/Procedures";
+import { References } from "./js/components/References";
+import { ScrollToTop } from "./js/components/ScrollToTop";
+import { Skills } from "./js/components/Skills";
+import { useScrollToTop } from "./js/hooks/useScrollToTop";
+import { WebSites } from "./js/components/WebSites";
 
-function App() {
-  const [count, setCount] = useState(0)
+export function App() {
+  useScrollToTop();
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header />
+      <main className="container">
+        <About />
+        <WebSites />
+        <Procedures />
+        <References />
+        <Skills />
+        <ScrollToTop />
+      </main>
+      <Footer />
     </>
-  )
+  );
 }
-
-export default App
